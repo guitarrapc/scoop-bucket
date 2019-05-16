@@ -1,0 +1,17 @@
+{
+    "version": "0.0.1",
+    "license": "Fonts are (c) Bitstream (see below). DejaVu changes are in public domain.Glyphs imported from Arev fonts are (c) Tavmjong Bah (see below)",
+    "homepage": "https://github.com/chrismwendt/bront",
+    "url": "https://github.com/chrismwendt/bront/raw/master/DejaVuSansMono-Bront.ttf",
+    "hash": "",
+    "checkver": "github",
+    "depends": "sudo",
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "$app",
+            "$dir",
+            "}"
+        ]
+    }
+}
