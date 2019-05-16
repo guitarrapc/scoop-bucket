@@ -3,7 +3,7 @@
     "license": "Fonts are (c) Bitstream (see below). DejaVu changes are in public domain.Glyphs imported from Arev fonts are (c) Tavmjong Bah (see below)",
     "homepage": "https://github.com/chrismwendt/bront",
     "url": "https://github.com/chrismwendt/bront/raw/master/DejaVuSansMono-Bront.ttf",
-    "hash": "",
+    "hash": "c10b26e3317daa36857d8d23a416ae414c3a8583d02c609f22294a55c81cc316",
     "checkver": "github",
     "depends": "sudo",
     "installer": {
