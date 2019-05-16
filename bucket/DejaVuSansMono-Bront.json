@@ -9,20 +9,20 @@
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
-            "Get-ChildItem $dir -File | ForEach-Object {",
-            "    New-ItemProperty -Path 'registry::HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace('.ttf', ' (TrueType)') -Value (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace('.ttf', '_0.ttf'))) -Force | Out-Null",
+            "Get-ChildItem $dir -File -Filter '*.ttf' | ForEach-Object {",
+            "    New-ItemProperty -Path 'registry::HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace($_.Extension, \"_0$($_.Extension)\"))) -Force | Out-Null",
             "    Copy-Item \"$_.FullName\" -destination \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\"",
-            "    Copy-Item \"$_.FullName\" -destination (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace('.ttf', '_0.ttf')))",
+            "    Copy-Item \"$_.FullName\" -destination (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace($_.Extension, \"_0$($_.Extension)\")))",
             "}"
         ]
     },
     "uninstaller": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
-            "Get-ChildItem $dir -File | ForEach-Object {",
-            "    Remove-ItemProperty -Path 'registry::HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace('.ttf', ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "Get-ChildItem $dir -File -Filter '*.ttf' | ForEach-Object {",
+            "    Remove-ItemProperty -Path 'registry::HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\$($_.Name)\"",
-            "    Remove-Item (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace('.ttf', '_0.ttf')))",
+            "    Remove-Item (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace($_.Extension, \"_0$($_.Extension)\")))",
             "}",
             "Write-Host \"The '$app' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
         ]
