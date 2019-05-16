@@ -10,8 +10,7 @@
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
             "$app",
-            "$dir",
-            "}"
+            "$dir"
         ]
     }
 }
