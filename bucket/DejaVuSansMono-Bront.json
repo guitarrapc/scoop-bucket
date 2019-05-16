@@ -1,5 +1,5 @@
 {
-    "version": "0.0.7",
+    "version": "0.0.8",
     "license": "Fonts are (c) Bitstream (see below). DejaVu changes are in public domain.Glyphs imported from Arev fonts are (c) Tavmjong Bah (see below)",
     "homepage": "https://github.com/chrismwendt/bront",
     "url": "https://github.com/chrismwendt/bront/raw/master/DejaVuSansMono-Bront.ttf",
@@ -10,9 +10,8 @@
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
             "Get-ChildItem $dir -File -Filter '*.ttf' | ForEach-Object {",
-            "    New-ItemProperty -Path 'registry::HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace($_.Extension, \"_0$($_.Extension)\"))) -Force | Out-Null",
-            "    Copy-Item $_.FullName -destination \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\"",
-            "    Copy-Item $_.FullName -destination (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace($_.Extension, \"_0$($_.Extension)\")))",
+            "    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "    Copy-Item \"$dir\\$_\" -destination \"$env:windir\\Fonts\"",
             "}"
         ]
     },
@@ -20,9 +19,8 @@
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
             "Get-ChildItem $dir -File -Filter '*.ttf' | ForEach-Object {",
-            "    Remove-ItemProperty -Path 'registry::HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
-            "    Remove-Item \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\$($_.Name)\"",
-            "    Remove-Item (\"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\\" + $($_.Name.Replace($_.Extension, \"_0$($_.Extension)\")))",
+            "    Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "Write-Host \"The '$app' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
         ]
