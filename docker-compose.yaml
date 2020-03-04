@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  bucket:
+    image: r15ch13/excavator:latest
+    deploy:
+      mode: global # creates only one container
+    volumes:
+      - ssh:/root/.ssh
+      - logs:/root/log
+    environment:
+      GIT_USERNAME: "Ikiru Yoshizaki"
+      GIT_EMAIL: "3856350+guitarrapc@users.noreply.github.com"
+      BUCKET: "guitarrapc/scoop-bucket:master"
+volumes:
+  ssh:
+  logs:
