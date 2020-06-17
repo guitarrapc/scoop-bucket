@@ -3,14 +3,10 @@
   "url": "http://qttabbar.wdfiles.com/local--files/qttabbar/QTTabBar_1038.zip",
   "depends": "sudo",
   "installer": {
-    "script": [
-      "ls",
-      "sudo QTTabBar.exe /QI"
-    ],
+    "script": "sudo Start-Process \"$dir/QTTabBar.exe\" -ArgumentList '/QI' -Wait -NoNewWindow",
     "keep": "true"
   },
   "uninstaller": {
-    "file": "sudo QTTabBar.exe",
-    "args": "/QU"
+    "script": "sudo Start-Process \"$dir/QTTabBar.exe\" -ArgumentList '/QU' -Wait -NoNewWindow"
   }
 }
