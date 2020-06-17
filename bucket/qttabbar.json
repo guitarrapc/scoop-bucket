@@ -3,7 +3,10 @@
   "url": "http://qttabbar.wdfiles.com/local--files/qttabbar/QTTabBar_1038.zip",
   "depends": "sudo",
   "installer": {
-    "script": "sudo QTTabBar.exe /QI",
+    "script": [
+      "ls",
+      "sudo QTTabBar.exe /QI"
+    ],
     "keep": "true"
   },
   "uninstaller": {
