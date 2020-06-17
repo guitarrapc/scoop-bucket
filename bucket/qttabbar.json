@@ -1,0 +1,14 @@
+{
+  "version": "1038",
+  "url": "http://qttabbar.wdfiles.com/local--files/qttabbar/QTTabBar_1038.zip",
+  "depends": "sudo",
+  "installer": {
+    "file": "QTTabBar.exe",
+    "args": "/QI",
+    "keep": "true"
+  },
+  "uninstaller": {
+    "file": "QTTabBar.exe",
+    "args": "/QU"
+  }
+}
