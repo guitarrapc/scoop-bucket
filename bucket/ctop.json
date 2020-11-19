@@ -1,0 +1,13 @@
+{
+    "description": "Top-like interface for container metrics",
+    "homepage": "https://github.com/bcicen/ctop",
+    "version": "0.7.5",
+    "license": "MIT",
+    "url": "https://github.com/bcicen/ctop/releases/download/v0.7.5/ctop-0.7.5-windows-amd64#/ctop.exe",
+    "hash": "sha256:bffb1499d62c46b70dd25d557b653f812ccdc8b4bfb08473c063a6265faf78b3",
+    "bin": "ctop.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/bcicen/ctop/releases/download/v$version/ctop-$version-windows-amd64#/ctop.exe"
+    }
+}
