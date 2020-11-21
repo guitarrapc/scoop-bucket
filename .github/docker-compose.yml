@@ -1,0 +1,17 @@
+version: "3.6"
+
+services:
+  main:
+    image: r15ch13/excavator:latest
+    deploy:
+      mode: global
+    command: bash -x /run.sh
+    volumes:
+      - ./.ssh:/root/.ssh
+      - ./run.sh:/run.sh
+    environment:
+      GIT_USERNAME: "actions-user"
+      GIT_EMAIL: "action@github.com"
+      SNOWFLAKES: "bombardier,ctop,py"
+      BUCKET: "guitarrapc/scoop-bucket"
+      SCOOP_DEBUG: "true"
