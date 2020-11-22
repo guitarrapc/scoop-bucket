@@ -11,7 +11,5 @@ services:
       - ./run.sh:/run.sh
     environment:
       GIT_USERNAME: "actions-user"
-      GIT_EMAIL: "action@github.com"
-      SNOWFLAKES: "bombardier,ctop,py"
+      GIT_EMAIL: "3856350+guitarrapc@users.noreply.github.com"
       BUCKET: "guitarrapc/scoop-bucket"
-      SCOOP_DEBUG: "true"
