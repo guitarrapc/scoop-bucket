@@ -9,6 +9,7 @@ guitarrapc's tool buckets.
 * bombardier
 * ctop
 * DejaVuSansMono-Bront
+* ghz
 * py
 * qttabbar
 * qttabbar-path
