@@ -1,8 +1,0 @@
-{
-    "version": "1.15.1",
-    "license": "The Amazon ECS CLI enables users to run their applications on ECS/Fargate using the Docker Compose file format, quickly provision resources, push/pull images in ECR, and monitor running applications on ECS/Fargate. https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI.html",
-    "homepage": "https://github.com/aws/amazon-ecs-cli",
-    "url": "https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-windows-amd64-v1.15.1.exe#/ecs-cli.exe",
-    "hash": "md5:5a79740ca732635d1b4a8790a2a9eeb6",
-    "bin": "ecs-cli.exe"
-}
