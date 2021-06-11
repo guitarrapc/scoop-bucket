@@ -8,6 +8,6 @@
     "bin": "ctop.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/bcicen/ctop/releases/download/v$version/ctop-$version-windows-amd64#/ctop.exe"
+        "url": "https://github.com/bcicen/ctop/releases/download/$version/ctop-$version-windows-amd64#/ctop.exe"
     }
 }
