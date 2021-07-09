@@ -7,6 +7,7 @@ guitarrapc's tool buckets.
 ## Buckets
 
 * bombardier
+* conftest
 * ctop
 * DejaVuSansMono-Bront
 * ghz
