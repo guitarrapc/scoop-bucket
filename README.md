@@ -26,3 +26,12 @@ see https://github.com/ScoopInstaller/Excavator
 * Set your bucket github account info at `https://github.com/guitarrapc/scoop-bucket/blob/master/.github/docker-compose`.
 * GitGub actions will automatically update your bucket with `auto-update-bucket.yaml` on every hour.
     * You can trigger manually.
+
+## TIPS
+
+### Auto add Hash for new Bucket
+
+1. Create bucket with empty hash, `"hash": ""`, 1 old version than latest.
+1. Push to origin, and run update workflow.
+1. Bucket update will detected and hash will automatically filled by system.
+
