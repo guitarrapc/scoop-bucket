@@ -1,13 +1,13 @@
 {
-    "description": "Simple gRPC benchmarking and load testing tool.",
-    "homepage": "https://github.com/bojand/ghz",
-    "version": "0.96.0",
-    "license": "MIT",
-    "url": "https://github.com/bojand/ghz/releases/download/v0.96.0/ghz-windows-x86_64.zip",
-    "hash": "a9ddbad3a12b0f8f74155ff90af53e67815367815e7aa48d0cd3dda77b493cbe",
-    "bin": "ghz.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/bojand/ghz/releases/download/v$version/ghz-windows-x86_64.zip"
-    }
+  "description": "Simple gRPC benchmarking and load testing tool.",
+  "homepage": "https://github.com/bojand/ghz",
+  "version": "0.96.0",
+  "license": "MIT",
+  "url": "https://github.com/bojand/ghz/releases/download/v0.96.0/ghz-windows-x86_64.zip",
+  "hash": "a9ddbad3a12b0f8f74155ff90af53e67815367815e7aa48d0cd3dda77b493cbe",
+  "bin": "ghz.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "url": "https://github.com/bojand/ghz/releases/download/v$version/ghz-windows-x86_64.zip"
+  }
 }
