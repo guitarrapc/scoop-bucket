@@ -1,10 +1,10 @@
 {
     "description": "Write tests against structured configuration data using the Open Policy Agent Rego query language",
     "homepage": "https://github.com/open-policy-agent/conftest",
-    "version": "0.25.0",
+    "version": "0.26.0",
     "license": "MIT",
-    "url": "https://github.com/open-policy-agent/conftest/releases/download/v0.25.0/conftest_0.25.0_Windows_x86_64.zip",
-    "hash": "c881f3b6f0dd73543b6d676df258afecf82d72a2936335f861a806a7e34e2755",
+    "url": "https://github.com/open-policy-agent/conftest/releases/download/v0.26.0/conftest_0.26.0_Windows_x86_64.zip",
+    "hash": "7b8d3c6ea5f9da14308daa3b0edacdd011173ad27b6ba89279005096f227b20c",
     "bin": "conftest.exe",
     "checkver": "github",
     "autoupdate": {
