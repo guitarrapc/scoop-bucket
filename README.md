@@ -6,6 +6,7 @@ guitarrapc's tool buckets.
 
 ## Buckets
 
+* actionlint
 * bombardier
 * conftest
 * ctop

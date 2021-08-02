@@ -1,0 +1,13 @@
+{
+    "description": ":octocat: Static checker for GitHub Actions workflow files",
+    "homepage": "https://github.com/rhysd/actionlint",
+    "version": "1.5.1",
+    "license": "MIT",
+    "url": "https://github.com/rhysd/actionlint/releases/download/v1.5.1/actionlint_1.5.1_windows_amd64.zip",
+    "hash": "",
+    "bin": "actionlint.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/rhysd/actionlint/releases/download/v$version/actionlint_$version_windows_amd64.zip"
+    }
+}
