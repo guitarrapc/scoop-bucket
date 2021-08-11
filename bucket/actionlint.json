@@ -1,16 +1,16 @@
 {
-    "version": "1.5.3",
+    "version": "1.6.0",
     "description": "Static checker for GitHub Actions workflow files",
     "homepage": "https://github.com/rhysd/actionlint",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/rhysd/actionlint/releases/download/v1.5.3/actionlint_1.5.3_windows_amd64.zip",
-            "hash": "581e017565b6fc445b023085099931cbf3e36288c95e215afd3f70b4b59508eb"
+            "url": "https://github.com/rhysd/actionlint/releases/download/v1.6.0/actionlint_1.6.0_windows_amd64.zip",
+            "hash": "a31f65581e4fffd64fa39f3c8ec47048d446233114b8e45e3469c1a47ec17341"
         },
         "32bit": {
-            "url": "https://github.com/rhysd/actionlint/releases/download/v1.5.3/actionlint_1.5.3_windows_386.zip",
-            "hash": "3e26b97a370a1bc97330be44aacc3711a6c0eb0e53ecee2122f593fce84e2baf"
+            "url": "https://github.com/rhysd/actionlint/releases/download/v1.6.0/actionlint_1.6.0_windows_386.zip",
+            "hash": "2fe796c6cb9d4f0d70645a2ff206d0841eb17b1c0e98503b7851c2265ba9bd97"
         }
     },
     "bin": "actionlint.exe",
