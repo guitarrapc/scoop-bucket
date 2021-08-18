@@ -6,11 +6,12 @@ guitarrapc's tool buckets.
 
 ## Buckets
 
-* actionlint
+* actionlint (will be move to scoop/extras)
 * bombardier
 * conftest
 * ctop
 * DejaVuSansMono-Bront
+* ecspresso
 * ghz
 * py
 * qttabbar
