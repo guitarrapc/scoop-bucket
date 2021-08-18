@@ -3,11 +3,19 @@
     "homepage": "https://github.com/bcicen/ctop",
     "version": "0.7.6",
     "license": "MIT",
-    "url": "https://github.com/bcicen/ctop/releases/download/0.7.6/ctop-0.7.6-windows-amd64#/ctop.exe",
-    "hash": "8e9badf4f03e289a551694604fef2df9584d0ec17787fd54aefa1b950dd63e17",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/bcicen/ctop/releases/download/0.7.6/ctop-0.7.6-windows-amd64#/ctop.exe",
+            "hash": "8e9badf4f03e289a551694604fef2df9584d0ec17787fd54aefa1b950dd63e17"
+        }
+    },
     "bin": "ctop.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/bcicen/ctop/releases/download/$version/ctop-$version-windows-amd64#/ctop.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bcicen/ctop/releases/download/$version/ctop-$version-windows-amd64#/ctop.exe"
+            }
+        }
     }
 }
