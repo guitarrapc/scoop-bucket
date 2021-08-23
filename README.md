@@ -6,7 +6,6 @@ guitarrapc's tool buckets.
 
 ## Buckets
 
-* actionlint (will be move to scoop/extras)
 * bombardier
 * conftest
 * ctop
@@ -16,6 +15,10 @@ guitarrapc's tool buckets.
 * py
 * qttabbar
 * qttabbar-path
+
+## Moved to Extras
+
+* actionlint
 
 ## Auto Update buckets
 
