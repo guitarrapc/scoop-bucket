@@ -12,6 +12,7 @@ guitarrapc's tool buckets.
 * DejaVuSansMono-Bront
 * ecspresso
 * ghz
+* opa
 * py
 * qttabbar
 * qttabbar-path
