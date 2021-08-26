@@ -1,12 +1,12 @@
 {
-    "version": "1.6.1",
+    "version": "1.6.2",
     "description": "ecspresso is a deployment tool for Amazon ECS",
     "homepage": "https://github.com/kayac/ecspresso",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kayac/ecspresso/releases/download/v1.6.1/ecspresso_1.6.1_windows_amd64.tar.gz",
-            "hash": "eabbb3be4fcb515875ba8db568a61c718dc595f6914603f39117680470d41989"
+            "url": "https://github.com/kayac/ecspresso/releases/download/v1.6.2/ecspresso_1.6.2_windows_amd64.tar.gz",
+            "hash": "5de7ee019b7343b141b86669c9575e501f33a0bcc413191eff659f0c2af636d5"
         }
     },
     "bin": "ecspresso.exe",
