@@ -26,13 +26,44 @@ guitarrapc's tool buckets.
 
 see https://github.com/ScoopInstaller/Excavator
 
-* Move to .github and run `docker-compose up --build` to gen sshkey.
-* Get public key `docker-compose exec bucket cat /root/.ssh/id_rsa.pub` and register to your github account.
-* Get private key `docker-compose exec bucket cat /root/.ssh/id_rsa` and encrypt it then put to `.github/.ssh/id_rsa.cipher`.
-    * Also set your encrypt key to github secrets.
-* Set your bucket github account info at `https://github.com/guitarrapc/scoop-bucket/blob/master/.github/docker-compose`.
-* GitGub actions will automatically update your bucket with `auto-update-bucket.yaml` on every hour.
-    * You can trigger manually.
+Follow steps to prepare auto update your bucket.
+
+1. Copy `.github` and `bin` directories of this Repository.
+1. Run following command on Git Bash to generate your SSH Key for auto bucket update.
+
+```shell
+# Remove existing `.ssh/id_rsa.pub` to regenerate ssh key for your repo.
+rm .github/.ssh/id_rsa.pub
+# Move to .github
+cd .github
+# Run gen sshkey. (This step will not run if .github/.ssh/id_rsa.pub exsits.)
+# * Public key is placed in host's `.github/.ssh/id_rsa.pub`.
+# * Private key is placed in host's `.github/.ssh/id_rsa`.
+docker-compose up --build
+# Encrypt private key `.github/.ssh/id_rsa.cipher` will be generated.
+KEY=<YOUR_CIPHER_KEY> ./encrypt.sh
+```
+
+1. Set your cipher key to github secrets, name `CIPHER_KEY`.
+1. Set your bucket github account info in `https://github.com/guitarrapc/scoop-bucket/blob/master/.github/docker-compose`.
+
+```yaml
+version: "3.6"
+
+services:
+  main:
+    image: r15ch13/excavator:latest
+    # definitions....
+    environment:
+      GIT_USERNAME: "<USER_NAME>"
+      GIT_EMAIL: "<EMAIL@ADDRESS>"
+      BUCKET: "<OWNER>/<REPOSITORY>"
+```
+
+1. Commit and push change to remote, GitHub Actions `auto update bucket` will be shown.
+1. GitHub Actions `auto update bucket` automatically update your bucket on schedled every hour.
+
+> NOTE: You can trigger action manually.
 
 ## TIPS
 
