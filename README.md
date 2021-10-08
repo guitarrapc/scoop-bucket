@@ -29,7 +29,7 @@ see https://github.com/ScoopInstaller/Excavator
 Follow steps to prepare auto update your bucket.
 
 * Copy `.github` and `bin` directories of this Repository.
-*1.* Run following command on Git Bash to generate your SSH Key for auto bucket update.
+* Run following command on Git Bash to generate your SSH Key for auto bucket update.
 
 ```shell
 # Remove existing `.ssh/id_rsa.pub` to regenerate ssh key for your repo.
