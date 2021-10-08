@@ -28,8 +28,8 @@ see https://github.com/ScoopInstaller/Excavator
 
 Follow steps to prepare auto update your bucket.
 
-1. Copy `.github` and `bin` directories of this Repository.
-1. Run following command on Git Bash to generate your SSH Key for auto bucket update.
+* Copy `.github` and `bin` directories of this Repository.
+*1.* Run following command on Git Bash to generate your SSH Key for auto bucket update.
 
 ```shell
 # Remove existing `.ssh/id_rsa.pub` to regenerate ssh key for your repo.
@@ -44,8 +44,8 @@ docker-compose up --build
 KEY=<YOUR_CIPHER_KEY> ./encrypt.sh
 ```
 
-1. Set your cipher key to github secrets, name `CIPHER_KEY`.
-1. Set your bucket github account info in `https://github.com/guitarrapc/scoop-bucket/blob/master/.github/docker-compose`.
+* Set your cipher key to github secrets, name `CIPHER_KEY`.
+* Set your bucket github account info in `https://github.com/guitarrapc/scoop-bucket/blob/master/.github/docker-compose`.
 
 ```yaml
 version: "3.6"
@@ -60,8 +60,8 @@ services:
       BUCKET: "<OWNER>/<REPOSITORY>"
 ```
 
-1. Commit and push change to remote, GitHub Actions `auto update bucket` will be shown.
-1. GitHub Actions `auto update bucket` automatically update your bucket on schedled every hour.
+* Commit and push change to remote, GitHub Actions `auto update bucket` will be shown.
+* GitHub Actions `auto update bucket` automatically update your bucket on schedled every hour.
 
 > NOTE: You can trigger action manually.
 
