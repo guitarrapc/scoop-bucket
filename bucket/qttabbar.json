@@ -1,6 +1,6 @@
 {
-    "version": "2048",
-    "url": "http://qttabbar-ja.wdfiles.com/local--files/qttabbar/QTTabBar%202048%20Beta2.zip",
+    "version": "1038",
+    "url": "http://qttabbar.wdfiles.com/local--files/qttabbar/QTTabBar_1038.zip",
     "depends": "sudo",
     "installer": {
         "script": "sudo Start-Process \"$dir/QTTabBar.exe\" -ArgumentList '/QI' -Wait -NoNewWindow",
