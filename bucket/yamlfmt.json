@@ -1,12 +1,12 @@
 {
-    "version": "0.4.0",
+    "version": "0.5.0",
     "description": "An extensible command line tool or library to format yaml files.",
     "homepage": "https://github.com/google/yamlfmt",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/google/yamlfmt/releases/download/v0.4.0/yamlfmt_0.4.0_windows_x86_64.tar.gz",
-            "hash": "40e0720d3f8a772ff7c142694642e021e3b4942eeb604d48b7bcb26ead2b0840"
+            "url": "https://github.com/google/yamlfmt/releases/download/v0.5.0/yamlfmt_0.5.0_windows_x86_64.tar.gz",
+            "hash": "7c10bb0530485ef7738f495f046edf3c018af4763ab32cd2b8713101ccfcb8d1"
         }
     },
     "bin": "yamlfmt.exe",
