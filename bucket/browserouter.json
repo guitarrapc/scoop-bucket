@@ -3,13 +3,13 @@
     "homepage": "https://github.com/slater1/BrowseRouter",
     "version": "0.6.0.0",
     "license": "MIT",
-    "url": "https://github.com/slater1/BrowseRouter/releases/download/0.6.0.0.0/BrowseRouter.0.6.0.0.zip",
+    "url": "https://github.com/slater1/BrowseRouter/releases/download/0.6.0.0/BrowseRouter.0.6.0.zip",
     "hash": "",
-    "extract_dir": "BrowseRouter 0.6.0.0",
+    "extract_dir": "BrowseRouter 0.6.0",
     "bin": "BrowseRouter.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/slater1/BrowseRouter/releases/download/$version.0/BrowseRouter.$version.zip",
-        "extract_dir": "BrowseRouter $version"
+        "url": "https://github.com/slater1/BrowseRouter/releases/download/$version/BrowseRouter.$majorVersion.$minorVersion.$patchVersion.zip",
+        "extract_dir": "BrowseRouter $majorVersion.$minorVersion.$patchVersion"
     }
 }
