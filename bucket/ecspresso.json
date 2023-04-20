@@ -1,6 +1,6 @@
 {
-    "version": "2.1.0",
     "description": "ecspresso is a deployment tool for Amazon ECS",
+    "version": "2.1.0",
     "homepage": "https://github.com/kayac/ecspresso",
     "license": "MIT",
     "architecture": {

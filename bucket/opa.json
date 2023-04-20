@@ -1,7 +1,7 @@
 {
     "description": "An open source, general-purpose policy engine.",
-    "homepage": "https://github.com/open-policy-agent/opa",
     "version": "0.51.0",
+    "homepage": "https://github.com/open-policy-agent/opa",
     "license": "MIT",
     "architecture": {
         "64bit": {
