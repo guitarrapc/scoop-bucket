@@ -13,7 +13,7 @@
             "    Write-Host Installing $_.Name",
             "    $fontdir = \"$env:LocalAppData\\Microsoft\\Windows\\Fonts\"",
             "    New-ItemProperty -Path 'registry::HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name '0xProto Regular (TrueType)' -Value \"$fontdir\\$($_.Name)\" -Force | Out-Null",
-            "    mkdir -Force \"$fontdir\" | Out-Null",
+            "    mkdir -Path \"$fontdir\" -Force | Out-Null",
             "    Copy-Item -LiteralPath \"$($_.FullName)\" -Destination \"$fontdir\"",
             "}"
         ]
