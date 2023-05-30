@@ -9,7 +9,6 @@
     "depends": "sudo",
     "installer": {
         "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
             "Get-ChildItem $dir -File -Filter '*.ttf' | ForEach-Object {",
             "    Write-Host Installing $_.Name",
             "    $fontdir = \"$env:WinDir\\Fonts\"",
@@ -21,7 +20,6 @@
     },
     "uninstaller": {
         "script": [
-            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
             "Get-ChildItem $dir -File -Filter '*.ttf' | ForEach-Object {",
             "    Write-Host Uninstalling $_.Name",
             "    $fontdir = \"$env:WinDir\\Fonts\"",
