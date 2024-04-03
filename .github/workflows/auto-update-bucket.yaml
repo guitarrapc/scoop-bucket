@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: openssl aes-256-cbc --pbkdf2 -d -in .github/.ssh/id_rsa.cipher -k ${{ secrets.CIPHER_KEY }} >> .github/.ssh/id_rsa
-      - run: docker-compose up
-        working-directory: .github
+      - run: docker compose up
+        working-directory: .github/
