@@ -72,4 +72,3 @@ services:
 1. Create bucket with empty hash, `"hash": ""`, 1 old version than latest.
 1. Push to origin, and run update workflow.
 1. Bucket update will detected and hash will automatically filled by system.
-

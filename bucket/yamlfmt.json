@@ -1,21 +1,21 @@
 {
-  "description": "An extensible command line tool or library to format yaml files.",
-  "version": "0.16.0",
-  "homepage": "https://github.com/google/yamlfmt",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/google/yamlfmt/releases/download/v0.16.0/yamlfmt_0.16.0_windows_x86_64.tar.gz",
-      "hash": "dea055eb85a30d923850e46b462bb5f0e8f3ca9aee3b33b76a55f22995224e1b"
-    }
-  },
-  "bin": "yamlfmt.exe",
-  "checkver": "github",
-  "autoupdate": {
+    "description": "An extensible command line tool or library to format yaml files.",
+    "version": "0.16.0",
+    "homepage": "https://github.com/google/yamlfmt",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/google/yamlfmt/releases/download/v$version/yamlfmt_$version_windows_x86_64.tar.gz"
-      }
+        "64bit": {
+            "url": "https://github.com/google/yamlfmt/releases/download/v0.16.0/yamlfmt_0.16.0_windows_x86_64.tar.gz",
+            "hash": "dea055eb85a30d923850e46b462bb5f0e8f3ca9aee3b33b76a55f22995224e1b"
+        }
+    },
+    "bin": "yamlfmt.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/google/yamlfmt/releases/download/v$version/yamlfmt_$version_windows_x86_64.tar.gz"
+            }
+        }
     }
-  }
 }
