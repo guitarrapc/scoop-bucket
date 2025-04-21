@@ -1,13 +1,24 @@
 {
-    "description": "Fast C# Native AOT utility to create symbolic links from dotfiles to your home directory",
-    "version": "0.2.0",
-    "homepage": "https://github.com/guitarrapc/DotfilesLinker",
-    "license": "MIT",
-    "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/0.2.0/DotfilesLinker_win_amd64.zip",
-    "hash": "",
-    "bin": "DotfilesLinker.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/$version/DotfilesLinker_win_amd64.zip"
+  "description": "Fast C# Native AOT utility to create symbolic links from dotfiles to your home directory",
+  "version": "0.2.0",
+  "homepage": "https://github.com/guitarrapc/DotfilesLinker",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/0.2.0/DotfilesLinker_win_amd64.zip",
+      "hash": ""
     }
+  },
+  "bin": "DotfilesLinker.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/$version/DotfilesLinker_win_amd64.zip",
+        "hash": {
+          "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/$version/DotfilesLinker_$version_checksums.txt"
+        }
+      }
+    }
+  }
 }
