@@ -4,19 +4,30 @@
 
 guitarrapc's tool buckets.
 
+```sh
+scoop bucket add guitarrapc https://github.com/guitarrapc/scoop-bucket.git
+```
+
 ## Buckets
 
+* 0xProto
+* DejaVuSansMono-Bront
 * bombardier
+* browserouter
 * conftest
 * ctop
-* DejaVuSansMono-Bront
+* dotfileslinker-go
+* dotfileslinker
 * ecspresso
 * ghz
 * googlechrome-stable
+* grpc_health_probe
 * opa
 * py
+* qttabbar-beta
 * qttabbar
 * qttabbar-path
+* yamllint
 
 ## Moved to Extras
 
