@@ -8,13 +8,15 @@ on:
 jobs:
   update:
     permissions:
-      contents: write
+      contents: read
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
-      - run: openssl aes-256-cbc --pbkdf2 -d -in .github/.ssh/id_rsa.cipher -k ${{ secrets.CIPHER_KEY }} >> .github/.ssh/id_rsa
-      - run: docker compose up
+      - name: Prepare SSH Key
+        run: openssl aes-256-cbc --pbkdf2 -d -in .github/.ssh/id_rsa.cipher -k ${{ secrets.CIPHER_KEY }} >> .github/.ssh/id_rsa
+      - name: Start Docker Compose
+        run: docker compose up
         working-directory: .github/
