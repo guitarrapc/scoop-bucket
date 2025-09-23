@@ -3,7 +3,7 @@ name: auto update bucket
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   update:
