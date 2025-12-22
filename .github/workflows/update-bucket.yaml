@@ -1,4 +1,4 @@
-name: auto update bucket
+name: update bucket
 
 on:
   workflow_dispatch:
