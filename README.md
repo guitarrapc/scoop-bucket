@@ -24,9 +24,6 @@ scoop bucket add guitarrapc https://github.com/guitarrapc/scoop-bucket.git
 * grpc_health_probe
 * opa
 * py
-* qttabbar-beta
-* qttabbar
-* qttabbar-path
 * yamllint
 
 ## Moved to Extras
