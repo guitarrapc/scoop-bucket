@@ -3,7 +3,7 @@ name: verify json
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   excavate:
