@@ -26,9 +26,15 @@ scoop bucket add guitarrapc https://github.com/guitarrapc/scoop-bucket.git
 * py
 * yamllint
 
-## Moved to Extras
+### Moved to Extras
 
 * actionlint
+
+### Removed from bucket
+
+* qttabbar-beta
+* qttabbar
+* qttabbar-path
 
 ## Auto Update buckets
 
