@@ -40,10 +40,10 @@ scoop bucket add guitarrapc https://github.com/guitarrapc/scoop-bucket.git
 
 ### Auto Update buckets
 
-> [!TIPS]
+> [!TIP]
 > You can trigger github action manually from [auto update bucket](https://github.com/guitarrapc/scoop-bucket/actions/workflows/auto-update-bucket.yaml) workflow.
 
-Use [ScoopInstaller/GithubActions](https://github.com/ScoopInstaller/GithubActions) to auto update bucket. Old version is deprecated on [#11](https://github.com/guitarrapc/scoop-bucket/pull/11).
+Using [ScoopInstaller/GithubActions](https://github.com/ScoopInstaller/GithubActions) to auto update bucket. Old version is deprecated on [#11](https://github.com/guitarrapc/scoop-bucket/pull/11).
 
 ### Auto add Hash for new Bucket
 
