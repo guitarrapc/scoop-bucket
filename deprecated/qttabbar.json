@@ -1,0 +1,13 @@
+{
+    "description": "Extends Explorer by tabs and extra folder views",
+    "version": "1038",
+    "url": "http://qttabbar.wdfiles.com/local--files/qttabbar/QTTabBar_1038.zip",
+    "depends": "sudo",
+    "installer": {
+        "script": "sudo Start-Process \"$dir/QTTabBar.exe\" -ArgumentList '/QI' -Wait -NoNewWindow",
+        "keep": "true"
+    },
+    "uninstaller": {
+        "script": "sudo Start-Process \"$dir/QTTabBar.exe\" -ArgumentList '/QU' -Wait -NoNewWindow"
+    }
+}
