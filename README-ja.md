@@ -1,6 +1,6 @@
 ![auto update bucket](https://github.com/guitarrapc/scoop-bucket/workflows/auto%20update%20bucket/badge.svg)
 
-English | [日本語](./README-ja.md)
+[English](./README.md) | 日本語
 
 # scoop-bucket
 
