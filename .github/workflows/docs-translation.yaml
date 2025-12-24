@@ -1,0 +1,57 @@
+name: document translation
+on:
+  workflow_dispatch:
+  issues:
+    types: [labeled]
+
+jobs:
+  issue:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+        id: app-token
+        with:
+          app-id: ${{ secrets.SYNCED_ACTIONS_BOT_APPID }}
+          private-key: ${{ secrets.SYNCED_ACTIONS_BOT_PRIVATE_KEY }}
+          permission-issues: write # grant write access to issues
+      - name: Create Issue body
+        run: |
+          cat << 'EOF' > body.txt
+          Apply the pull request fixes that have been applied to recently updated documents to each language's documentation.
+
+          - README.md: English (en-us)
+          - README-ja.md: Japanese (ja-jp)
+
+          ---
+
+          Issue created by GitHub Actions: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          EOF
+      - name: Create issue
+        run: |
+          gh issue create \
+            --title "[Automate] Apply the fixes from pull requests to the doc for each language." \
+            --body-file body.txt \
+            --label "documentation"
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }} # require trigger workflow
+
+  # Split assign job
+  # When issue creation and assignment are performed within the same job, the Copilot agent task does not trigger. This is unexpected behavior.
+  # As a workaround, splitting the GitHub Actions job into separate jobs for issue creation and assignment.
+  assign:
+    if: ${{ github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'documentation') && startsWith(github.event.issue.title, '[Automate]') }}
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Assign copilot agent
+        run: gh issue edit ${{ github.event.issue.number }} --add-assignee @copilot
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
