@@ -13,6 +13,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
       - name: Validator
         uses: ScoopInstaller/GithubActions@797d33021c0fbd52be705ce8136d9d62c5b41782 # main (Nov 25, 2025)
         env:
