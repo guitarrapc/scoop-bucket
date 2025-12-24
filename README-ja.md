@@ -4,7 +4,7 @@
 
 # scoop-bucket
 
-guitarrapc's tool buckets.
+guitarrapc のツールバケットです。
 
 ```sh
 scoop bucket add guitarrapc https://github.com/guitarrapc/scoop-bucket.git
@@ -49,12 +49,12 @@ scoop bucket add guitarrapc https://github.com/guitarrapc/scoop-bucket.git
 > [!TIP]
 > [auto update bucket](https://github.com/guitarrapc/scoop-bucket/actions/workflows/auto-update-bucket.yaml) ワークフローを手動で実行できます。
 
-Using [ScoopInstaller/GithubActions](https://github.com/ScoopInstaller/GithubActions) to auto update bucket. Old version is deprecated on [#11](https://github.com/guitarrapc/scoop-bucket/pull/11).
+[ScoopInstaller/GithubActions](https://github.com/ScoopInstaller/GithubActions) を使用してバケットを自動更新しています。旧バージョンは [#11](https://github.com/guitarrapc/scoop-bucket/pull/11) で非推奨となりました。
 
 ### Auto add Hash for new Bucket
 
 新しいバケットのハッシュを自動追加するには、以下の手順に従ってください。
 
-1. Create bucket with empty hash, `"hash": ""`, 1 version older than latest.
-2. Push to origin, and run update workflow.
-3. Bucket update will be detected and hash will automatically be filled by the system.
+1. 空のハッシュ `"hash": ""` を持つバケットを、最新より1つ古いバージョンで作成します。
+2. origin にプッシュし、更新ワークフローを実行します。
+3. バケットの更新が検出され、ハッシュがシステムによって自動的に入力されます。
