@@ -27,5 +27,7 @@ When reviewing changes to documentation, focus on the following points:
 - Sample Code
   - Verify that the code works correctly and maintains quality.
   - Ensure the code follows general .NET coding guidelines (e.g., naming conventions).
+- Language Consistency
+  - Ensure that the same language is used throughout the document (e.g., English sentence remain used even in Japanese document).
 
 If any part deviates from these points, propose a correction.
