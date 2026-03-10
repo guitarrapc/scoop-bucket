@@ -1,12 +1,12 @@
 {
     "description": "An open source, general-purpose policy engine.",
-    "version": "1.14.0",
+    "version": "1.14.1",
     "homepage": "https://github.com/open-policy-agent/opa",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/open-policy-agent/opa/releases/download/v1.14.0/opa_windows_amd64.exe#/opa.exe",
-            "hash": "990fa2ced9e89048c6cc798191b471295cc8f11e52a2fde88b8554385f8c5d4b"
+            "url": "https://github.com/open-policy-agent/opa/releases/download/v1.14.1/opa_windows_amd64.exe#/opa.exe",
+            "hash": "9d5462e83914dd7ad850b6bb54e8e08b864fe027542321cce4723eb1f956561a"
         }
     },
     "bin": "opa.exe",
