@@ -16,7 +16,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Excavator
-        uses: ScoopInstaller/GithubActions@31b5ce6220ad5bad5fb5f814508fc7247f2d0163 # main (Nov 25, 2025)
+        uses: ScoopInstaller/GithubActions@162fa9fe9ee81ec7407ba46bc732e211085b552e # main (Nov 25, 2025)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: "1"
