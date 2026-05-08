@@ -28,6 +28,7 @@ Following tools are included in this bucket.
 * grpc_health_probe
 * opa
 * py
+* seiton
 * yamlfmt
 
 ### Moved to Extras
