@@ -16,6 +16,6 @@ jobs:
         with:
           persist-credentials: false
       - name: Validator
-        uses: ScoopInstaller/GithubActions@63f20efd5d6f876b16fbe2bc95428821b6051c0e # main (Nov 25, 2025)
+        uses: ScoopInstaller/GithubActions@e174c3bef2aeec16a40f2f075cafa167733f0a3e # main (Nov 25, 2025)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
