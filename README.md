@@ -28,6 +28,7 @@ Following tools are included in this bucket.
 * grpc_health_probe
 * opa
 * py
+* scenario2cast
 * seiton
 * yamlfmt
 

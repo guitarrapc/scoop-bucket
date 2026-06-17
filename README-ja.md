@@ -28,6 +28,8 @@ scoop bucket add guitarrapc https://github.com/guitarrapc/scoop-bucket.git
 * grpc_health_probe
 * opa
 * py
+* scenario2cast
+* seiton
 * yamlfmt
 
 ### Moved to Extras
