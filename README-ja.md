@@ -26,6 +26,7 @@ scoop bucket add guitarrapc https://github.com/guitarrapc/scoop-bucket.git
 * ghz
 * googlechrome-stable
 * grpc_health_probe
+* matrix
 * opa
 * py
 * scenetake

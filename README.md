@@ -26,6 +26,7 @@ Following tools are included in this bucket.
 * ghz
 * googlechrome-stable
 * grpc_health_probe
+* matrix
 * opa
 * py
 * scenetake
