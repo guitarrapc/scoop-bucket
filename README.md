@@ -33,7 +33,7 @@ Following tools are included in this bucket.
 * seiton
 * yamlfmt
 
-### Moved to Extras
+### Moved to Scoop official
 
 Following tool has been moved to official buckets.
 
