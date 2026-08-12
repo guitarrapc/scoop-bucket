@@ -18,15 +18,15 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/$version/DotfilesLinker_win_amd64.zip",
+                "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/v$version/DotfilesLinker_win_amd64.zip",
                 "hash": {
-                    "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/$version/DotfilesLinker_$version_checksums.txt"
+                    "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/v$version/DotfilesLinker_$version_checksums.txt"
                 }
             },
             "arm64": {
-                "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/$version/DotfilesLinker_win_arm64.zip",
+                "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/v$version/DotfilesLinker_win_arm64.zip",
                 "hash": {
-                    "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/$version/DotfilesLinker_$version_checksums.txt"
+                    "url": "https://github.com/guitarrapc/DotfilesLinker/releases/download/v$version/DotfilesLinker_$version_checksums.txt"
                 }
             }
         }
